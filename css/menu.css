@@ -103,7 +103,6 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 20px;
   }
   
   #titre > h1 {
@@ -116,10 +115,9 @@ html {
   }
   
   #listemenu > div {
-    margin-bottom: 45px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin-bottom: 20px;
   }
   
   #listemenu > div > p {
@@ -145,7 +143,7 @@ html {
   .item {
     position: relative;
     width: 330px;
-    height: 80px;
+    height: 70px;
     margin-top: 30px;
     border-radius: 15px;
     background-color: white;
@@ -164,11 +162,11 @@ html {
   }
   
   #plats div {
-    animation-delay: 1000ms;
+    animation-delay: 800ms;
   }
   
-  #dessert div {
-    animation-delay: 1500ms;
+  #desserts div {
+    animation-delay: 1200ms;
   }
   
   @keyframes display-elem {
@@ -218,6 +216,7 @@ html {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    color: dimgray;
   }
   
   .item-prix {
@@ -327,7 +326,7 @@ html {
   }
   
   /* Tablette */
-  @media screen and (min-width: 425px) {
+  @media screen and (min-width: 426px) {
 
     #titre {
       justify-content: center;
@@ -339,5 +338,9 @@ html {
   
     #listemenu > div > p, .souligne {
       align-self: center;
+    }
+
+    #listemenu > div{
+        align-items: center;
     }
   }

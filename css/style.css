@@ -1,38 +1,3 @@
-.progress{
-    position: relative;
-    height: 10px;
-    width: 1110%;
-    border: 10px solid #f4a261;
-    border-radius: 15px;
-}
-
-.progress .color{
-    position: absolute;
-    background-color: red;
-    width: 0px;
-    height: 10px;
-    border-radius: 15px;
-    animation: progres 4s infinite linear;    
-}
-
-@keyframes progres{
-    0%{
-      width: 0%;
-    }
-    25%{
-        width: 50%;
-    }
-    50%{
-        width: 75%;
-    }
-    75%{
-        width: 85%;
-    }
-    100%{
-        width: 100%;
-    }
-}
-
 html {
     font-family: "Roboto";
     --main-color: #9356DC;
@@ -40,7 +5,26 @@ html {
     --third-color : #99E2D0;
     overflow-x: hidden;
   }
-  
+
+  .loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -76px 0 0 -76px;
+    z-index: 1;
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid var(--main-color);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
   img {
     height: 100%;
     object-fit: cover;
@@ -87,7 +71,6 @@ html {
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    font-size: 18px;
   }
   
   #explorer * {
@@ -298,6 +281,13 @@ html {
     display: flex;
     align-items: center;
   }
+
+  #logofooter{
+      object-fit: contain;
+      height : 110px;
+      width : 110px;
+      filter: invert(100%);
+  }
   
   footer > div {
     height: 180px;
@@ -333,16 +323,49 @@ html {
   }
   
   /* Tablette et plus */
-  @media screen and (min-width: 425px) {
+  @media screen and (min-width: 1024px) {
     #fonction {
       align-items: center;
+      height : 250px;
+    }
+
+    #fonction ol{
+        flex-direction: row;
+        width : 100%;
+    }
+
+    #fonction li{
+        width : 30%;
+        height : 50%;
+    }
+
+    #section-resto{
+        height : 100%;
+    }
+
+    #allrestos{
+        flex-direction: row;
+        width : 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
   
     .restaurant{
         width : 100%;
+        height : 300px;
+    }
+
+    #allrestos a{
+        height : 60%;
+        width : 45%;
+        margin : 20px 0;
     }
 
     .restaurant a{
+        width : 100%;
+    }
+
+    .restaurant > img{
         width : 100%;
     }
 
