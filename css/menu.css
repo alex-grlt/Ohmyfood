@@ -47,7 +47,7 @@ html {
   }
   
   #menu {
-    padding: 10px 10px 5% 5%;
+    padding: 10px 10px 1% 1%;
     padding-bottom: 75px;
     margin-top: -40px;
     display: flex;
@@ -102,19 +102,32 @@ html {
   #titre {
     display: flex;
     justify-content: space-between;
+    margin-left: 10px;
     align-items: center;
+    padding-bottom: 20px;
   }
   
   #titre > h1 {
     font-family: "Shrikhand";
     font-weight: normal;
+    margin-right : 50px;
   }
   
   #titre > i {
     font-size: 24px;
   }
+
+  #listemenu{
+    display : block;
+    margin-left: 10px;
+  }
   
   #listemenu > div {
+    height: 350px;
+    position: inherit;
+    top: 0;
+    overflow: hidden;
+    width : 100%;
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
@@ -133,16 +146,9 @@ html {
     align-self: flex-start;
   }
   
-  #listemenu > div {
-    height: 350px;
-    position: inherit;
-    top: 0;
-    overflow: hidden; 
-  }
-  
   .item {
     position: relative;
-    width: 330px;
+    width: 100%;
     height: 70px;
     margin-top: 30px;
     border-radius: 15px;
@@ -324,9 +330,34 @@ html {
   li i {
     width: 30px;
   }
+
+
+  @media screen and (min-width: 426px) and (max-width : 1024px) {
+
+    #titre {
+      justify-content: center;
+    }
   
-  /* Tablette */
-  @media screen and (min-width: 426px) {
+    #listemenu > div > p, .souligne {
+      align-self: center;
+    }
+
+    #listemenu{
+        margin-left: 10px;
+    }
+
+    #listemenu > div{
+        align-items: center;
+        width : 100%;
+    }
+
+    .item{
+        width: 330px;
+    }
+  }
+  
+
+  @media screen and (min-width: 1025px) {
 
     #titre {
       justify-content: center;
@@ -335,6 +366,10 @@ html {
     #titre > h1 {
       margin-right: 100px;
     }
+
+    #listemenu{
+        display : flex;
+    }
   
     #listemenu > div > p, .souligne {
       align-self: center;
@@ -342,5 +377,14 @@ html {
 
     #listemenu > div{
         align-items: center;
+        width : 33%;
     }
+    .item{
+        width: 330px;
+    }
+
+    
   }
+
+
+  
