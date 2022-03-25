@@ -140,11 +140,6 @@ section {
     flex-direction: column;
 }
 
-
-#fonction > h2 {
-    margin-left: -15px; 
-    }
-
 #fonction ol {
     height: 250px;
     width: 320px;
