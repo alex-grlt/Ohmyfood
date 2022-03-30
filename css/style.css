@@ -24,7 +24,7 @@ html {
 }
 
 
-.container {
+.container{
     position: fixed;
     height: 100%;
     width: 100%;
@@ -41,7 +41,7 @@ html {
 }
 
 
-.loader {
+.loader{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -55,7 +55,7 @@ html {
     animation: spin 2s linear infinite;
 }
 
-img {
+img{
     height: 100%;
     object-fit: cover;
 }
@@ -142,7 +142,7 @@ section {
 
 #fonction ol {
     height: 250px;
-    width: 320px;
+    width: 100%;
     padding: 0 20px 0 30px;
     list-style: none;
     display: flex;
@@ -361,10 +361,14 @@ li i {
 }
 
 /*tablette*/
-@media screen and (min-width: 426px) and (max-width : 1024px){
+@media screen and (min-width: 600px) and (max-width : 1024px){
 
     #fonction {
         align-items: center;
+    }
+    
+    #fonction ol{
+        width: 320px;
     }
 
     #resto-titre {

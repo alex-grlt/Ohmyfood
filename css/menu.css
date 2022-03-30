@@ -57,19 +57,19 @@ html {
     z-index: 1;
   }
   
-  .heart {
+  .coeur {
     position: relative;
     font-size: 25px;
   }
   
-  .heart:hover .far.fa-heart {
+  .coeur:hover .far.fa-heart {
     transition-property: transform;
     transition-duration: 200ms;
     transition-delay: 300ms;
     transform: scale(0);
   }
   
-  .heart:hover .fa.fa-heart {
+  .coeur:hover .fa.fa-heart {
     transform: scale(1)
   }
   
@@ -335,7 +335,7 @@ html {
   }
 
 
-  @media screen and (min-width: 426px) and (max-width : 1024px) {
+  @media screen and (min-width: 600px) and (max-width : 1024px) {
 
     #titre {
       justify-content: center;
